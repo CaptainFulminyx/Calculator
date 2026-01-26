@@ -1,39 +1,24 @@
-# calc
+# Doodle Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository contains the source code for my personal portfolio website. The project presents my work, skills, and interests through a clean and expressive interface while maintaining clarity, responsiveness, and performance.
 
-## Recommended IDE Setup
+The portfolio is built with a component-based architecture and focuses on thoughtful UI design, smooth interactions, and accessibility across devices.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Recommended Browser Setup
+- Light and dark theme support with system preference detection  
+- Responsive layout for mobile, tablet, and desktop  
+- Modular and reusable components  
+- Subtle animations and interactive elements  
+- Clean and maintainable codebase  
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Technology Stack
 
-## Customize configuration
+- Vue 3 (Composition API)  
+- JavaScript (ES6+)  
+- HTML5 and CSS3  
+- Vite  
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## License
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-# Calculator
+This project is licensed under the MIT License.
