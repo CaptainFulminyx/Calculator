@@ -5,7 +5,9 @@
     <div class="container">
       <AppHeader
         :isDarkMode="isDarkMode"
+        :isOpen ="isOpen"
         @toggleTheme="toggleTheme"
+        @openMenu="openMenu"
         />
 
       <HeroSection
@@ -40,15 +42,19 @@
   import AppFooter from '@/components/AppFooter.vue'
   import DoodleBackground from '@/components/DoodleBackground.vue'
 
-  import acodepluginimg from '@/assets/acodeplugin.jpg'
-  import springgame from '@/assets/springgame.jpg'
-  import portfolioimg from '@/assets/portfolio.jpg'
+  import acodepluginimg from '@/assets/acodeplugin.avif'
+  import springgame from '@/assets/gardengame.avif'
+  import portfolioimg from '@/assets/portfolio.avif'
 
   const isDarkMode = ref(false)
+  const isOpen = ref(false)
 
   const toggleTheme = () => {
     isDarkMode.value = !isDarkMode.value
     localStorage.setItem('portfolio-theme', isDarkMode.value ? 'dark': 'light')
+  }
+  const openMenu = () => {
+    isOpen.value = !isOpen.value
   }
 
   onMounted(() => {
@@ -58,7 +64,7 @@
   })
 
   const name = 'Fulminyx'
-  const bio = 'A passionate programmer driven by curiosity and problem-solving, combining analytical thinking with a love for thoughtful design. I enjoy building meaningful digital experiences shaped by patterns, people, and the stories hidden in data.'
+  const bio = "I'm a passionate programmer driven by curiosity and problem-solving, combining analytical thinking with a love for thoughtful design. I enjoy building meaningful digital experiences shaped by patterns, people, and the stories hidden in data."
   const contactMessage =
   "I'm looking for opportunities where I can contribute..."
 
@@ -67,21 +73,21 @@
   const projects = [{
     id: 1,
     title: 'Acode Plugins',
-    description: 'A collection of lightweight plugins built for the Acode editor to extend its core functionality and improve everyday developer workflows. Developed using vanilla JavaScript, these plugins focus on simplicity, performance, and seamless integration with the editor’s ecosystem.',
+    description: 'A collection of lightweight plugins built for the Acode editor to extend its core functionality and improve everyday developer workflows.',
     img: acodepluginimg,
     link: 'https://acode.app/plugin/thunder.plugin.csv_to_table.free'
   },
     {
       id: 2,
       title: 'Web Garden Game',
-      description: 'An interactive and visually playful web-based game that allows users to build and customize a colorful digital garden. The project blends engaging UI animations with game-like mechanics to create a relaxing, creative experience in the browser.',
+      description: 'An interactive and visually playful web-based game that allows users to build and customize a colorful digital garden.',
       img: springgame,
       link: 'https://captainfulminyx.github.io/Spring-Garden-Game/'
     },
     {
       id: 3,
       title: 'Personal Portfolio',
-      description: 'A handcrafted personal portfolio designed to reflect creativity through a doodle-inspired visual language and thoughtful interactions.',
+      description: 'A handcrafted personal portfolio.',
       img: portfolioimg,
       link: 'https://captainfulminyx.netlify.app'
     }]

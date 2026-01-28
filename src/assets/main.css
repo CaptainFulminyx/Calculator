@@ -71,17 +71,53 @@
 }
 
 .container {
-  max-width: min(1200px, 90vw);
+  max-width: min(1200px, 100vw);
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 
+
 header {
-  padding: var(--space-lg) 0;
+  padding: var(--space-sm) 0;
   border-bottom: var(--doodle-border);
   margin-bottom: var(--space-xl);
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "logo actions"
+    "nav nav";
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Grid areas */
+.logo {
+  grid-area: logo;
+}
+
+.header-actions {
+  grid-area: actions;
+}
+
+.nav-content {
+  grid-area: nav;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* 🔥 Large screens */
+@media (min-width: 768px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo nav actions";
+  }
+
+  .nav-content {
+    justify-content: center;
+  }
 }
 
 .header-content {
@@ -114,12 +150,19 @@ header {
   border-radius: 2px;
 }
 
+.nav-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: var(--space-sm) 0 0 0;
+  gap: 10px;
+}
 
-.theme-toggle {
+.theme-toggle , .menu-toggle, .nav-link{
   background: transparent;
   border: var(--doodle-border);
   border-radius: var(--doodle-radius);
-  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 1.25rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.5rem, 2.5vw, 1rem);
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.875rem, 1.5vw, 1rem);
   font-weight: 600;
@@ -134,7 +177,7 @@ header {
   white-space: nowrap;
 }
 
-.theme-toggle:hover {
+.theme-toggle, .menu-toggle, .nav-link:hover {
   transform: translateY(-3px);
   box-shadow: 
     clamp(6px, 1.5vw, 12px) 
@@ -408,16 +451,18 @@ header {
 .skill-item:hover {
   background-color: var(--primary-color);
   color: white;
+  transform: rotate(5deg);
 }
 
 .skill-item::after {
-  content: '✏️';
+  content: '+';
   position: absolute;
   top: -10px;
   right: -10px;
-  font-size: clamp(0.875rem, 1.5vw, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
   opacity: 0;
   transition: opacity 0.3s;
+  color: var(--border-color);
 }
 
 .skill-item:hover::after {
