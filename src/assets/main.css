@@ -633,6 +633,18 @@ footer {
     gap: var(--space-lg);
     position: relative;
     overflow: hidden;
+    
+    
+    a{
+      background: var(--primary-color);
+      color: var(--text-color);
+      text-decoration: none;
+      width: 150px;
+      padding: 5px;
+      border: var(--doodle-border);
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
 }
 
 .github-section::before,

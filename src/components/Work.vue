@@ -39,7 +39,7 @@
           />
       </div>
 
-
+      <a href="https://github.com/CaptainFulminyx">See More ></a>
     </section>
 
     <!-- ================= ARTICLES ================= -->
@@ -50,9 +50,10 @@
         v-for="article in mediumArticles"
         :key="article.link"
         >
-        <Icon icon="ri:medium-fill" />
+        <Icon icon="ri:medium-fill" width="30px" height="30px" />
         {{ article.title }}
       </div>
+      <a href="https://medium.com/@captainfulminyx">See More ></a>
     </section>
 
     <!-- ================= BLOG POSTS ================= -->
@@ -63,9 +64,10 @@
         v-for="post in devtoPosts"
         :key="post.id"
         >
-        <Icon icon="lineicons:dev" />
+        <Icon icon="lineicons:dev" width="30px" height="30px" />
         {{ post.title }}
       </div>
+      <a href="https://dev.to/captainfulminyx">See More ></a>
     </section>
 
     <!-- ================= LEETCODE ================= -->
@@ -86,6 +88,7 @@
             />
         </div>
       </div>
+      <a href="https://leetcode.com/u/CaptainFulminyx">See More ></a>
     </section>
   </section>
 </template>
@@ -164,13 +167,13 @@
       github.value.repos = filtered.slice(0,
         4);
       githubLanguageOptions.value = {
-  labels: Object.keys(languageCount),
-  legend: {
-    show: true
-  }
-}
+        labels: Object.keys(languageCount),
+        legend: {
+          show: true
+        }
+      }
 
-githubLanguageSeries.value = Object.values(languageCount)
+      githubLanguageSeries.value = Object.values(languageCount)
     } catch (error) {
       console.error("Failed to load GitHub data:",
         error);
