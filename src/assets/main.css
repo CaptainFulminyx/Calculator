@@ -685,6 +685,7 @@ footer {
 
 .github-section > * {
     max-width: 100%;
+    min-width: 0;
 }
 .github-repos-box {
     display: flex;
@@ -731,16 +732,17 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 1/1;
     grid-area: lang;
     max-width: 400px;
-    max-height: 400px;
     padding: var(--space-md);
     border: var(--doodle-border);
     border-radius: var(--doodle-radius);
     background-color: var(--bg-color);
     box-shadow: var(--doodle-shadow);
+    align-self: center;
+    justify-self: center ;
 }
 
 /* ================= ARTICLES / BLOG ================= */
@@ -846,6 +848,9 @@ footer {
             "lang";
     }
 
+.github-section>*{
+  max-width: 100%;
+}
     .github-repo-item {
         grid-template-columns: 1fr;
         text-align: center;
@@ -854,9 +859,6 @@ footer {
     .repo-stars,
     .repo-forks {
         justify-self: center;
-    }
-
-    .github-information {
     }
 
     .article-item,
