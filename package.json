@@ -1,6 +1,6 @@
 {
-  "name": "calc",
-  "version": "0.0.0",
+  "name": "Portfolio",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -13,10 +13,9 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
+    "@types/cal-heatmap": "^3.5.39",
     "apexcharts": "^5.3.6",
-    "cal-heatmap": "^4.2.4",
     "github-calendar": "^2.3.4",
-    "jheat.js": "^4.5.3",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4",
     "vue3-apexcharts": "^1.10.0"
