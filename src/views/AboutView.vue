@@ -51,6 +51,12 @@
     icon: 'mingcute:music-line',
     link: 'https://share.google/mfgmCmE1QJ8NXWt7V'
   },
+    {
+      name: 'Luchi & Cholar Daal',
+      desc: 'Favourite food from childhood',
+      icon: 'famicons:fast-food-outline',
+      link: 'https://en.wikipedia.org/wiki/Luchi'
+    },
   ]
 
 </script>
